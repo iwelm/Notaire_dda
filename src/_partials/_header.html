@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Projet vide</title>
+        <title>{{title}}</title>
 
         <link rel="stylesheet" href="styles/main.css" />
         <script src="scripts/main.js" defer></script>
     </head>
 
-    <body>
+    <body data-component="Scrolly">
+        <header class="header" data-component="Header">
+            <div class="wrapper">
+                <a href="index.html" class="header__brand"><svg class="icon">
+                    <use xlink:href="#icon-logo4"></use>
+                </svg></a>
+                <nav class="nav-primary">
+                    <ul>
+                        <li>
+                            <a href="recettes.html" >À propos</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" >Nos services</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" >Notre équipe</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" >Contactez-nous</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header__toggle js-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>                
+            </div>
+      
+        </header>

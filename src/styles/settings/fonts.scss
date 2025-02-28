@@ -9,7 +9,7 @@
     --font-size-content: #{typo(16px, 18px)};
 
     /// Grosseur des textes
-    --font-size-h1: #{typo(25px, 50px)};
+    --font-size-h1: #{typo(20px, 55px)};
     --font-size-h2: #{typo(20px, 35px)};
     --font-size-h3: #{typo(15px, 35px)};
     --font-size-h4: #{typo(14px, 27px)};
@@ -17,4 +17,6 @@
     --font-size-nav: #{typo(14px, 20px)};
     --font-size-logo: #{typo(77px, 220px)};
     --font-size-border: #{typo(3px, 3px)};
+
+    --padding-text-hero: #{typo(15px, 70px)};
 }

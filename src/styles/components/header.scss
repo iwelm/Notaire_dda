@@ -3,13 +3,13 @@
    ========================================================================== */
 
 .header {
-    --header-height: 100px;
+    --header-height: 125px;
     background-color: var(--color-bg-white);
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 0 var(--spacing-sm);
-    margin-top: 30px;
+    margin: 15px 0;
     position: sticky;
     top: 0;
     height: var(--header-height);
@@ -20,9 +20,11 @@
         //Logo
         font-size: var(--font-size-logo);
         transition: all 0.2s $ease-out-sine;
+        transform: scale(1);
 
         &:hover {
             color: var(--color-green);
+            transform: scale(1.05);
         }
     }
 
@@ -32,8 +34,6 @@
         align-items: center;
 
         li {
-            gap: 40px;
-
             a {
                 &:hover {
                     color: var(--color-green);
@@ -52,7 +52,7 @@
         z-index: 2;
     }
 
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: $breakpoint-xl) {
         padding: 0 var(--spacing-lg);
     }
 
@@ -152,12 +152,12 @@ nav {
 
     ul {
         display: flex;
-        gap: 0px;
         flex-direction: column;
         justify-content: center;
         list-style: none;
         padding: 0;
         margin: 0;
+        gap: 40px;
         width: 100%;
         transform: translateY(-70%);
         transition: transform 1.2s $ease-out-expo;
@@ -178,19 +178,19 @@ nav {
             text-align: center;
             color: var(--color-grey);
             font-size: var(--font-size-nav);
+            font-weight: 500;
             position: relative;
             text-decoration: none;
             border-radius: 20px;
-            min-width: 200px;
-
-            padding: 10px 20px;
+            padding: 10px 10px;
             align-items: center;
-
-            transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
+            transform: scale(1);
+            transition: all 0.6s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
 
             &:hover {
                 text-decoration: none;
                 color: var(--color-green);
+                transform: scale(1.15);
             }
 
             @media screen and (min-width: $breakpoint-nav) {

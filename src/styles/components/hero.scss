@@ -1,0 +1,47 @@
+.hero {
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+
+        img {
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .hero_content {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: var(--padding-text-hero) 0 0 var(--padding-text-hero);
+
+            h1 {
+                color: var(--color-white);
+                font-weight: 500;
+                max-width: 800px;
+                line-height: 125%;
+            }
+
+            .bouton {
+                margin: 50px 0 0 0;
+                padding: 15px 50px;
+                border: 3px solid var(--color-green);
+                width: fit-content;
+                border-radius: 15px;
+                color: var(--color-green);
+                text-decoration: none;
+                transition: all 0.6s $ease-out-expo;
+                text-transform: uppercase;
+                font-size: var(--font-size-nav);
+                transform: scale(1);
+
+                &:hover {
+                    color: var(--color-grey);
+                    border-color: var(--color-white);
+                    background-color: var(--color-white);
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

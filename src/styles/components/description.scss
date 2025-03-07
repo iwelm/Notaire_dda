@@ -1,0 +1,33 @@
+.description {
+    margin: 100px 0;
+    padding: 50px 0;
+    background-color: var(--color-blue);
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+
+        .description_name {
+            margin: 0;
+            font-size: var(--font-size-h3);
+            max-width: 565px;
+
+            p {
+                color: var(--color-white);
+                span {
+                    color: var(--color-green);
+                }
+            }
+        }
+
+        .description_content {
+            margin: 0;
+            p {
+                font-size: var(--font-size-content);
+                max-width: 600px;
+                color: var(--color-white);
+            }
+        }
+    }
+}

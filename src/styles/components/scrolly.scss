@@ -49,7 +49,7 @@
         //décorations pour cacher l'éléments
         opacity: 0;
         transform: translateY(-80px);
-        transition: all 2.3s $ease-out-expo;
+        transition: all 1.3s $ease-out-expo;
 
         &.is-active {
             opacity: 1;

@@ -1,0 +1,54 @@
+.comments {
+    margin-bottom: 120px;
+    .wrapper {
+        .titre_section {
+            margin-bottom: 80px;
+            h1 {
+                font-weight: 500;
+                margin-bottom: 10px;
+
+                .green {
+                    font-weight: 900;
+                    color: var(--color-green);
+                }
+            }
+
+            .green_line {
+                width: 900px;
+                border: 2px solid var(--color-green);
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+
+            .card {
+                h3 {
+                    padding: 15px 15px;
+                    background-color: var(--color-blue);
+                    color: var(--color-green);
+                    border-radius: 10px;
+                    width: fit-content;
+                    margin-bottom: 20px;
+                }
+
+                .container {
+                    padding: 30px 30px;
+                    background-color: var(--color-blue);
+                    border-radius: 15px;
+
+                    p {
+                        color: var(--color-white);
+                        margin-bottom: 40px;
+                    }
+
+                    p:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

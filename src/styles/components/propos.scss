@@ -1,0 +1,42 @@
+.propos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -90px;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .icon {
+            font-size: var(--font-size-icon-fleurgrande);
+            color: var(--color-green);
+            position: relative;
+            overflow: hidden;
+            left: 7%;
+        }
+        .card_content {
+            .titre_section {
+                margin-bottom: 80px;
+                h1 {
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+
+                .green_line {
+                    width: 370px;
+                    border: 2px solid var(--color-green);
+                }
+            }
+
+            p {
+                font-size: var(--font-size-p);
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

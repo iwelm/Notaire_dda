@@ -1,0 +1,46 @@
+.historique {
+    background-color: var(--color-blue);
+    padding: 100px 0;
+    margin-bottom: 120px;
+    .wrapper {
+        .titre_section {
+            margin-bottom: 80px;
+            h1 {
+                font-weight: 500;
+                margin-bottom: 10px;
+                color: var(--color-white);
+            }
+
+            .green_line {
+                width: 370px;
+                border: 2px solid var(--color-green);
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: start;
+            column-gap: 100px;
+
+            .card {
+                h1 {
+                    color: var(--color-green);
+                }
+
+                p {
+                    color: var(--color-white);
+                    font-size: var(--font-size-content);
+
+                    .green {
+                        color: var(--color-green);
+                    }
+
+                    .bold {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,10 +6,12 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Poppins', sans-serif;
 
-    --font-size-content: #{typo(14px, 20px)};
-    --font-size-p: #{typo(14px, 25px)};
+    --font-size-content: #{typo(14px, 18px)};
+    --font-size-p: #{typo(14px, 23px)};
+
     --font-size-icon-service: #{typo(30px, 50px)};
     --font-size-icon-arrow: #{typo(20px, 40px)};
+    --font-size-icon-fleurgrande: #{typo(200px, 800px)};
 
     /// Grosseur des textes
     --font-size-h1: #{typo(25px, 55px)};

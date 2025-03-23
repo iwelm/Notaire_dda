@@ -6,6 +6,11 @@
             justify-content: center;
             align-items: center;
             margin: -50px 0 50px 0;
+
+            @media screen and (max-width: $breakpoint-xs) {
+                margin: -20px 0 0 0;
+            }
+
             .bouton {
                 display: flex;
                 justify-content: center;
@@ -45,6 +50,11 @@
                 grid-template-columns: 1.2fr 1fr;
                 margin-bottom: 100px;
 
+                @media screen and (max-width: $breakpoint-nav) {
+                    grid-template-columns: 1fr;
+                    margin-bottom: 60px;
+                }
+
                 .card_content p:first-child {
                     margin-bottom: 15px;
                 }
@@ -53,6 +63,15 @@
                     background-color: var(--color-blue);
                     padding: 30px 70px;
                     border-radius: 15px 0 0 15px;
+
+                    @media screen and (max-width: $breakpoint-nav) {
+                        border-radius: 15px 15px 0 0;
+                        padding: 30px 40px;
+                    }
+
+                    @media screen and (max-width: $breakpoint-xs) {
+                        padding: 25px 25px;
+                    }
 
                     h2 {
                         color: var(--color-green);
@@ -73,6 +92,11 @@
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         gap: 60px;
+
+                        @media screen and (max-width: $breakpoint-smm) {
+                            grid-template-columns: 1fr;
+                            gap: 20px;
+                        }
 
                         .card_content_sujet {
                             display: flex;
@@ -99,6 +123,11 @@
                         height: 100%;
                         object-fit: cover;
                         border-radius: 0 15px 15px 0;
+
+                        @media screen and (max-width: $breakpoint-nav) {
+                            border-radius: 0 0 15px 15px;
+                            max-height: 280px;
+                        }
                     }
                 }
             }

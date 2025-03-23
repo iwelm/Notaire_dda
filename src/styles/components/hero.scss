@@ -1,12 +1,26 @@
 .hero {
+    overflow-x: hidden;
     .wrapper {
         position: relative;
         display: flex;
         justify-content: flex-start;
 
+        @media screen and (max-width: $breakpoint-nav) {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+        }
+
         img {
             border-radius: 15px;
             object-fit: cover;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                border-radius: 0;
+                width: 100vw;
+                height: 45vh;
+                position: relative;
+            }
         }
 
         .hero_content {
@@ -15,31 +29,64 @@
             position: absolute;
             padding: var(--padding-text-hero) 0 0 var(--padding-text-hero);
 
+            @media screen and (max-width: $breakpoint-sm) {
+                padding: 50px 27px;
+            }
+
+            @media screen and (max-width: $breakpoint-xs) {
+                padding: 40px 25px;
+            }
+
             h1 {
                 color: var(--color-white);
                 font-weight: 500;
                 max-width: 800px;
                 line-height: 125%;
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    max-width: 600px;
+                }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    max-width: 450px;
+                }
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    max-width: 350px;
+                }
             }
 
             .bouton {
                 margin: 50px 0 0 0;
                 padding: 15px 50px;
-                border: 3px solid var(--color-green);
+                color: var(--color-grey);
+                background-color: var(--color-white);
                 width: fit-content;
                 border-radius: 15px;
-                color: var(--color-green);
                 text-decoration: none;
                 transition: all 0.6s $ease-out-expo;
                 text-transform: uppercase;
                 font-size: var(--font-size-nav);
                 transform: scale(1);
+                font-size: var(--font-size-bouton);
 
                 &:hover {
-                    color: var(--color-grey);
-                    border-color: var(--color-white);
-                    background-color: var(--color-white);
+                    color: var(--color-white);
+                    background-color: var(--color-green);
                     transform: scale(1.1);
+                }
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    padding: 15px 40px;
+                }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    padding: 10px 30px;
+                    margin: 30px 0 0 0;
+                }
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    padding: 15px 30px;
                 }
             }
         }

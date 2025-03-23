@@ -4,9 +4,14 @@
     background-color: var(--color-blue);
     .wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 150px;
+
+        @media screen and (max-width: $breakpoint-nav) {
+            flex-direction: column;
+            gap: 30px;
+        }
 
         .description_name {
             margin: 0;
@@ -17,6 +22,10 @@
                 color: var(--color-white);
                 span {
                     color: var(--color-green);
+                }
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    text-align: center;
                 }
             }
         }

@@ -4,12 +4,13 @@
     background-color: var(--color-blue);
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 150px;
 
         @media screen and (max-width: $breakpoint-nav) {
             flex-direction: column;
+            justify-content: space-between;
             gap: 30px;
         }
 

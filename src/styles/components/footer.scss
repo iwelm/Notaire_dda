@@ -33,6 +33,11 @@ footer {
             p {
                 color: var(--color-white);
                 font-weight: 300;
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    margin-top: 5px;
+                }
+
                 .green {
                     font-weight: 700;
                     text-transform: uppercase;

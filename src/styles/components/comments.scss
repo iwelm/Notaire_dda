@@ -1,5 +1,10 @@
 .comments {
     margin-bottom: 120px;
+
+    @media screen and (max-width: $breakpoint-smm) {
+        margin-bottom: 60px;
+    }
+
     .wrapper {
         .titre_section {
             margin-bottom: 80px;
@@ -14,8 +19,12 @@
             }
 
             .green_line {
-                width: 900px;
+                width: var(--width-green-line-grande);
                 border: 2px solid var(--color-green);
+
+                @media screen and (max-width: $breakpoint-xss) {
+                    width: 300px;
+                }
             }
         }
 
@@ -23,6 +32,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 100px;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                grid-template-columns: 1fr;
+                column-gap: 0;
+                row-gap: 70px;
+            }
 
             .card {
                 h3 {

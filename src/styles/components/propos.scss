@@ -3,7 +3,10 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    margin-top: -90px;
+
+    @media screen and (max-width: $breakpoint-mdd) {
+        margin-top: 0;
+    }
 
     .wrapper {
         display: flex;
@@ -16,18 +19,31 @@
             color: var(--color-green);
             position: relative;
             overflow: hidden;
-            left: 7%;
+            left: var(--left-test);
+            z-index: -10;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                left: 6%;
+            }
+
+            @media screen and (max-width: $breakpoint-xs) {
+                display: none;
+            }
         }
         .card_content {
             .titre_section {
                 margin-bottom: 80px;
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    margin-bottom: 30px;
+                }
                 h1 {
                     font-weight: 500;
                     margin-bottom: 10px;
                 }
 
                 .green_line {
-                    width: 370px;
+                    width: var(--width-green-line);
                     border: 2px solid var(--color-green);
                 }
             }
@@ -36,6 +52,11 @@
                 font-size: var(--font-size-p);
                 font-weight: 400;
                 margin-bottom: 30px;
+                color: var(--color-grey);
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    max-width: 300px;
+                }
             }
         }
     }

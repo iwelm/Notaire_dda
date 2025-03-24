@@ -20,10 +20,11 @@
         font-size: var(--font-size-logo);
         transition: all 0.2s $ease-out-sine;
         transform: scale(1);
+        color: var(--color-grey);
 
         &:hover {
-            color: var(--color-green);
             transform: scale(1.05);
+            color: var(--color-green);
         }
     }
 

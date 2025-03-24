@@ -2,9 +2,20 @@
     background-color: var(--color-blue);
     padding: 100px 0;
     margin-bottom: 120px;
+
+    @media screen and (max-width: $breakpoint-nav) {
+        padding: 50px 0;
+        margin-bottom: 60px;
+    }
+
     .wrapper {
         .titre_section {
             margin-bottom: 80px;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                margin-bottom: 30px;
+            }
+
             h1 {
                 font-weight: 500;
                 margin-bottom: 10px;
@@ -12,7 +23,7 @@
             }
 
             .green_line {
-                width: 370px;
+                width: var(--width-green-line);
                 border: 2px solid var(--color-green);
             }
         }
@@ -22,6 +33,18 @@
             grid-template-columns: 1fr 1fr 1fr;
             align-items: start;
             column-gap: 100px;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 60px;
+                row-gap: 60px;
+            }
+
+            @media screen and (max-width: $breakpoint-smm) {
+                grid-template-columns: 1fr;
+                column-gap: 0px;
+                row-gap: 30px;
+            }
 
             .card {
                 h1 {

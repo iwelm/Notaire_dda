@@ -14,7 +14,7 @@
     --font-size-icon-fleurgrande: #{typo(200px, 800px)};
 
     /// Grosseur des textes
-    --font-size-h1: #{typo(25px, 55px)};
+    --font-size-h1: #{typo(23px, 55px)};
     --font-size-h2: #{typo(20px, 45px)};
     --font-size-h3: #{typo(18px, 35px)};
     --font-size-h4: #{typo(14px, 27px)};
@@ -27,4 +27,8 @@
     --padding-text-hero: #{typo(15px, 70px)};
 
     --width-slogan-img: #{typo(200px, 540px)};
+    --width-green-line: #{typo(150px, 370px)};
+    --width-green-line-grande: #{typo(380px, 900px)};
+
+    --left-test: #{typo(-10px, 100px)};
 }

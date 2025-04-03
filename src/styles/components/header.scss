@@ -15,12 +15,13 @@
     z-index: 10;
     transition: transform 0.9s $ease-in-out-back; // *****Vitesse animations header******
 
-    svg {
+    .icon {
         //Logo
         font-size: var(--font-size-logo);
         transition: all 0.2s $ease-out-sine;
         transform: scale(1);
         color: var(--color-grey);
+        max-height: 55px;
 
         &:hover {
             transform: scale(1.05);

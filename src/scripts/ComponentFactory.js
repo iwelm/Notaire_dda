@@ -1,11 +1,13 @@
 import Scrolly from './components/Scrolly';
 import Header from './components/Header';
+import Form from './components/Form';
 
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
       Header,
       Scrolly,
+      Form,
     };
     this.init();
   }

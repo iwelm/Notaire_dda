@@ -1,0 +1,16 @@
+.contact {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 150px;
+        justify-items: stretch;
+        align-items: start;
+
+        .coordonnees {
+            .green_line {
+                width: 100%;
+                border: 2px solid var(--color-green);
+            }
+        }
+    }
+}

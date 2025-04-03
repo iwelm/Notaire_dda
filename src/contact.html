@@ -1,0 +1,101 @@
+{% include "_partials/_header.html" with {title: 'Contactez-nous'} %}
+<section class="map">
+    <div class="wrapper">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1017.0089525879946!2d-73.41444340382978!3d45.5725633303894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc902c85634ec65%3A0x205e79718bbedd0b!2sNotaires%20Dufour%20Dup%C3%A9r%C3%A9%20%26%20associ%C3%A9s%20Inc.!5e1!3m2!1sen!2sca!4v1743704613779!5m2!1sen!2sca"
+            width="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="auto"
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="wrapper">
+        <div class="coordonnees">
+            <h2>Nos coordonnées</h2>
+            <div class="green_line"></div>
+            <ul>
+                <li>
+                    <p><span class="bold">Adresse :</span></p>
+                </li>
+                <li>
+                    <p><span class="bold">Téléphone</span></p>
+                </li>
+                <li>
+                    <p><span class="bold">Poste :</span></p>
+                </li>
+                <li>
+                    <p><span class="bold">Email</span></p>
+                </li>
+                <li>
+                    <p><span class="bold">Heure d'ouverture</span></p>
+                    <p>
+                        <span class="bold-small">Lundi au jeudi :</span>
+                        9h à 12h | 13h à 17h
+                    </p>
+
+                    <p>
+                        <span class="bold-small">Vendredi :</span>
+                        9h à 12h
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="formulaire">
+            <h2>Contactez-nous!</h2>
+            <div class="green_line"></div>
+            <form action="#" class="form" data-component="Form">
+                <div class="form_body">
+                    <p>Vous avez des questions ou vous souhaitez prendre un rendez-vous ? Ecrivez-nous et nous vous répondrons dans les plus brefs délais.</p>
+                    <fieldset class="grid-form">
+                        <div class="input">
+                            <label class="input_label" for="lastname">Votre nom</label>
+                            <input class="input_element" type="text" name="lastname" id="lastname" placeholder="Votre nom" required />
+                            <p>Veuillez ajouter votre nom</p>
+                        </div>
+
+                        <div class="input">
+                            <label class="input_label" for="name">Votre adresse courriel</label>
+                            <input class="input_element" type="email" name="email" id="email" placeholder="2057691@cegepmontpetit.ca" required />
+                            <p>Veuillez ajouter votre adresse courriel</p>
+                        </div>
+
+                        <div class="input">
+                            <label class="input_label" for="phone">Votre numéro de téléphone</label>
+                            <input
+                                class="input_element"
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="(418) 620-5020"
+                                pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s\.\-]?\d{3}[\s\.\-]?\d{4}$"
+                                required
+                            />
+                            <p>Veuillez ajouter votre numéro de téléphone</p>
+                        </div>
+
+                        <div class="input textarea u-grid-fullwidth">
+                            <label class="input_label" for="comment">Commentaire</label>
+                            <textarea class="input_element" name="comment" id="comment" maxlength="500" required></textarea>
+                            <p>Veuillez ajouter un commentaire</p>
+                        </div>
+                    </fieldset>
+
+                    <footer class="form_footer">
+                        <button class="button">Envoyer</button>
+                    </footer>
+                </div>
+
+                <div class="form_confirmation">
+                    <h2>Envoyé!</h2>
+                    <p>Votre requête à été soumis avec succès</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% include "_partials/_footer.html" %}

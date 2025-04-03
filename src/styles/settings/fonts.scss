@@ -20,7 +20,7 @@
     --font-size-h4: #{typo(14px, 27px)};
 
     --font-size-nav: #{typo(14px, 20px)};
-    --font-size-logo: #{typo(77px, 220px)};
+    --font-size-logo: #{typo(190px, 220px)};
     --font-size-border: #{typo(3px, 3px)};
     --font-size-bouton: #{typo(16px, 20px)};
 
@@ -29,6 +29,8 @@
     --width-slogan-img: #{typo(200px, 540px)};
     --width-green-line: #{typo(150px, 370px)};
     --width-green-line-grande: #{typo(380px, 900px)};
+
+    --height-map: #{typo(480px, 580px)};
 
     --left-test: #{typo(-10px, 100px)};
 }

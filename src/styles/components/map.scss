@@ -1,0 +1,9 @@
+.map {
+    margin: 0 0 50px 0;
+    .wrapper {
+        iframe {
+            height: var(--height-map);
+            border-radius: 15px;
+        }
+    }
+}

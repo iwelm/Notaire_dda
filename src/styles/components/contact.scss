@@ -1,15 +1,44 @@
 .contact {
     .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.6fr;
         gap: 150px;
         justify-items: stretch;
         align-items: start;
+
+        @media screen and (max-width: $breakpoint-nav) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
 
         .coordonnees {
             .green_line {
                 width: 100%;
                 border: 2px solid var(--color-green);
+            }
+
+            h2 {
+                font-weight: 500;
+            }
+
+            ul {
+                list-style: none;
+                margin-top: 30px;
+                max-width: 400px;
+                li {
+                    margin-bottom: 20px;
+                    p {
+                        font-weight: 300;
+                        .bold {
+                            font-weight: 600;
+                            font-size: var(--font-size-p);
+                        }
+
+                        .bold-small {
+                            font-weight: 600;
+                        }
+                    }
+                }
             }
         }
     }

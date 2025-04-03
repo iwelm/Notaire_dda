@@ -19,16 +19,28 @@
             <div class="green_line"></div>
             <ul>
                 <li>
-                    <p><span class="bold">Adresse :</span></p>
+                    <p>
+                        <span class="bold">Adresse :</span>
+                        1590, rue Ampère, suite 302, Boucherville (QC) J4B 7L4
+                    </p>
                 </li>
                 <li>
-                    <p><span class="bold">Téléphone</span></p>
+                    <p>
+                        <span class="bold">Téléphone</span>
+                        (450) 906-3313
+                    </p>
                 </li>
                 <li>
-                    <p><span class="bold">Poste :</span></p>
+                    <p>
+                        <span class="bold">Poste :</span>
+                        (450) 906-3310
+                    </p>
                 </li>
                 <li>
-                    <p><span class="bold">Email</span></p>
+                    <p>
+                        <span class="bold">Email</span>
+                        info@notairesdufourdupere.com
+                    </p>
                 </li>
                 <li>
                     <p><span class="bold">Heure d'ouverture</span></p>
@@ -53,41 +65,41 @@
                     <p>Vous avez des questions ou vous souhaitez prendre un rendez-vous ? Ecrivez-nous et nous vous répondrons dans les plus brefs délais.</p>
                     <fieldset class="grid-form">
                         <div class="input">
-                            <label class="input_label" for="lastname">Votre nom</label>
+                            <label class="input_label" for="name"></label>
                             <input class="input_element" type="text" name="lastname" id="lastname" placeholder="Votre nom" required />
                             <p>Veuillez ajouter votre nom</p>
                         </div>
 
-                        <div class="input">
-                            <label class="input_label" for="name">Votre adresse courriel</label>
-                            <input class="input_element" type="email" name="email" id="email" placeholder="2057691@cegepmontpetit.ca" required />
-                            <p>Veuillez ajouter votre adresse courriel</p>
-                        </div>
+                        <div class="duo">
+                            <div class="input">
+                                <label class="input_label" for="name"></label>
+                                <input class="input_element" type="email" name="email" id="email" placeholder="Votre adresse courriel" required />
+                                <p>Veuillez ajouter votre adresse courriel</p>
+                            </div>
 
-                        <div class="input">
-                            <label class="input_label" for="phone">Votre numéro de téléphone</label>
-                            <input
-                                class="input_element"
-                                type="tel"
-                                name="phone"
-                                id="phone"
-                                placeholder="(418) 620-5020"
-                                pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s\.\-]?\d{3}[\s\.\-]?\d{4}$"
-                                required
-                            />
-                            <p>Veuillez ajouter votre numéro de téléphone</p>
+                            <div class="input">
+                                <label class="input_label" for="phone"></label>
+                                <input
+                                    class="input_element"
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Votre numéro de téléphone"
+                                    pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s\.\-]?\d{3}[\s\.\-]?\d{4}$"
+                                    required
+                                />
+                                <p>Veuillez ajouter votre numéro de téléphone</p>
+                            </div>
                         </div>
 
                         <div class="input textarea u-grid-fullwidth">
-                            <label class="input_label" for="comment">Commentaire</label>
-                            <textarea class="input_element" name="comment" id="comment" maxlength="500" required></textarea>
+                            <label class="input_label" for="comment"></label>
+                            <textarea class="input_element" name="comment" id="comment" placeholder="Votre message" maxlength="500" required></textarea>
                             <p>Veuillez ajouter un commentaire</p>
                         </div>
                     </fieldset>
 
-                    <footer class="form_footer">
-                        <button class="button">Envoyer</button>
-                    </footer>
+                    <button class="button">Envoyer</button>
                 </div>
 
                 <div class="form_confirmation">
@@ -96,6 +108,15 @@
                 </div>
             </form>
         </div>
+    </div>
+</section>
+
+<section class="politique">
+    <div class="wrapper">
+        <p>
+            Consultez notre
+            <a href="">politique de confidentialité</a>
+        </p>
     </div>
 </section>
 {% include "_partials/_footer.html" %}

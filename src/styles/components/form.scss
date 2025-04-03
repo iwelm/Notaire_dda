@@ -2,19 +2,16 @@
     .green_line {
         width: 100%;
         border: 2px solid var(--color-green);
-
-        @media screen and (max-width: $breakpoint-xss) {
-            width: 300px;
-        }
     }
 
     h2 {
-        margin: 0;
+        font-weight: 500;
     }
 
     p {
-        font-weight: 400;
-        font-size: 22px;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 30px 0 30px 0;
     }
 
     .bold {
@@ -30,45 +27,52 @@
 }
 
 .form {
+    .input {
+        width: 100%;
+    }
+    .duo {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        @media screen and (max-width: $breakpoint-lgg) {
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+    }
+
     fieldset {
         border: none; //Enlever bordure
         padding: 0;
     }
     .grid-form {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: var(--spacing-md);
-        grid-template-columns: 1fr;
-
-        @media screen and (min-width: $breakpoint-sm) {
-            grid-template-columns: 1fr 1fr;
-            column-gap: 80px;
-            row-gap: 60px;
-        }
-
-        @media screen and (min-width: $breakpoint-md) {
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 90px;
-            row-gap: 70px;
-        }
     }
 }
 
-.form_footer {
-    display: flex;
-    justify-content: flex-end;
-    width: fit-content;
+.button {
+    margin: 15px 0 50px 0;
+    cursor: pointer;
+    padding: 15px 65px;
+    border-radius: 15px;
+    border: none;
+    text-transform: uppercase;
+    border: 2px solid var(--color-grey);
+    color: var(--color-grey);
+    transform: scale(1);
+    transition: all 0.9s $ease-out-expo;
+    transform: translateY(0) scale(1);
+    background-color: var(--color-bg-white);
+    text-transform: uppercase;
+    font-size: var(--font-size-p);
 
-    .button {
-        cursor: pointer;
-        padding: 11px 50px;
-        border-radius: 5px;
-        border: none;
-        text-transform: uppercase;
-        transition: all 0.7s $ease-out-expo;
-        margin-top: 30px;
-
-        &:hover {
-        }
+    &:hover {
+        color: var(--color-white);
+        background-color: var(--color-green);
+        border-color: var(--color-green);
+        transform: scale(1.1);
     }
 }
 
@@ -83,47 +87,57 @@
 
     .is-sent & {
         display: block;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and (max-width: $breakpoint-nav) {
+            margin-top: 50px;
+        }
     }
 }
 
 .input_label {
     display: block; // Mets le texte au dessus de la boite
-    font-weight: 300;
+    font-weight: 600;
     font-size: 22px;
+    color: var(--color-grey);
 }
 
 .input_element {
     transition: all 0.8s $ease-out-expo;
-    border-radius: 20px 20px 0 0;
-
-    padding: 1em;
+    color: var(--color-grey);
+    padding: 1.2em;
     background: none;
-    border: none;
-
+    border-radius: 10px;
+    border: 1px solid var(--color-grey);
     cursor: pointer;
     font-family: inherit;
     outline: none;
     width: 100%;
     transition: all 0.8s $ease-out-expo;
+    transform: scale(1);
 
     //hover
     &:hover {
-        background-color: var(--color-light-blue);
         -webkit-box-shadow: inset 0 0 0 30px none !important; // L'espece de carrées plus sombres en hover à l'interieur du bleu
-        border-radius: 20px 20px 0 0;
+        border-radius: 5px;
+        box-shadow: 0px 1px 15px rgba(91, 137, 31, 1);
     }
 
     &::placeholder {
         color: rgba(
-            $color: #daf1f7,
+            $color: var(--color-grey),
             $alpha: 0.7
         ); // Couleur du texte dans le placeholder
     }
 
     &:-webkit-autofill,
     &:-webkit-autofill:active {
-        -webkit-box-shadow: inset 0 0 0 30px none !important;
-        -webkit-text-fill-color: inherit !important;
+        -webkit-box-shadow: 0 0 0 1000px var(--color-white) inset !important;
+        -webkit-text-fill-color: var(--color-grey) !important;
     }
 
     &::after {
@@ -131,33 +145,32 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: var(--color-light-blue);
+        background-color: var(--color-grey);
         opacity: 0;
         transition: all 0.8s $ease-out-expo;
     }
 
     &:focus {
-        background-color: var(--color-light-blue);
+        background-color: var(--color-white);
         -webkit-box-shadow: inset 0 0 0 30px none !important;
     }
 }
 
 /*
-   textarea
-   ========================================================================== */
+textarea
+========================================================================== */
 
 .textarea {
     .input_element {
         resize: vertical;
-        height: 150px;
-        background-color: var(--color-white-blue);
-        color: var(--color-dark-blue);
+        height: 130px;
+        color: var(--color-grey);
     }
 }
 
 /*
-   error
-   ========================================================================== */
+error
+========================================================================== */
 
 .input,
 .form_list {

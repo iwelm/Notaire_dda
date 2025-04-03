@@ -1,0 +1,23 @@
+.politique {
+    background-color: var(--color-green);
+    padding: 65px 0;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-size: var(--font-size-p);
+            color: var(--color-blue);
+            a {
+                font-weight: 600;
+                color: var(--color-blue);
+                text-decoration: none;
+                transition: all 0.9s $ease-out-expo;
+
+                &:hover {
+                    color: var(--color-bg-white);
+                }
+            }
+        }
+    }
+}

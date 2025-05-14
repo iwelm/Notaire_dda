@@ -11,6 +11,23 @@ body {
     line-height: 1.6;
     background-color: var(--color-bg-white);
     overflow-x: hidden;
+
+    .titre_section {
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $breakpoint-nav) {
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .green_line {
+            width: var(--width-green-line);
+            border: 2px solid var(--color-green);
+        }
+    }
 }
 
 * {

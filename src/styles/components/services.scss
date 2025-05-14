@@ -1,0 +1,90 @@
+.hero {
+    overflow-x: hidden;
+    margin-bottom: 120px;
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+
+        @media screen and (max-width: $breakpoint-nav) {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+        }
+
+        img {
+            border-radius: 15px;
+            object-fit: cover;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                border-radius: 0;
+                width: 100vw;
+                height: 45vh;
+                position: relative;
+            }
+        }
+
+        .hero_content {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: var(--padding-text-hero) 0 0 var(--padding-text-hero);
+
+            @media screen and (max-width: $breakpoint-sm) {
+                padding: 50px 27px;
+            }
+
+            @media screen and (max-width: $breakpoint-xs) {
+                padding: 40px 25px;
+            }
+
+            h4 {
+                color: var(--color-white);
+                font-weight: 500;
+                max-width: 660px;
+                line-height: 125%;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    max-width: 600px;
+                }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    max-width: 450px;
+                }
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    max-width: 350px;
+                }
+            }
+        }
+    }
+}
+
+.particulier {
+    .wrapper {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        li {
+            cursor: pointer;
+            list-style: none;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        .tab-container > div {
+            display: none;
+        }
+        .tab-container > div.is-active {
+            display: block;
+        }
+    }
+}

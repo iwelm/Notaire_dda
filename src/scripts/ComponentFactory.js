@@ -1,6 +1,7 @@
 import Scrolly from './components/Scrolly';
 import Header from './components/Header';
 import Form from './components/Form';
+import Tabs from './components/Tabs';
 
 export default class ComponentFactory {
   constructor() {
@@ -8,6 +9,7 @@ export default class ComponentFactory {
       Header,
       Scrolly,
       Form,
+      Tabs,
     };
     this.init();
   }

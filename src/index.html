@@ -1,6 +1,6 @@
 {% include "_partials/_header.html" with {title: 'Accueil'} %}
 
-<section class="hero">
+<section class="hero" data-scrolly="fromTop">
     <div class="wrapper">
         <img src="assets/images/hero.jpg" alt="image d'acceuil de la page" />
 
@@ -13,13 +13,13 @@
 
 <section class="description">
     <div class="wrapper">
-        <div class="description_name">
+        <div class="description_name" data-scrolly="fromLeft">
             <p>
                 <span class="green">Dufour Dupéré & associés,</span>
                 notaires et conseillers juridiques
             </p>
         </div>
-        <div class="description_content">
+        <div class="description_content" data-scrolly="fromRight">
             <p>
                 Une équipe présente pour vous guider dans les différentes étapes de votre vie. Dans les moments les plus heureux comme les plus difficiles,
                 notre équipe de notaires est là pour vous soutenir et vous aider dans tous les aspects. Nous mettrons notre expertise à votre service afin de
@@ -29,10 +29,10 @@
     </div>
 </section>
 
-<section class="slogan">
+<section class="slogan" data-scrolly="fromBottom">
     <div class="wrapper">
         <h2>Faire les bons choix, une nécessité pour protéger vos droits!</h2>
-        <div class="slogan_box">
+        <div class="slogan_box" data-scrolly="fromTop">
             <img src="assets/images/slogan_logo.png" alt="" />
             <div class="slogan_content">
                 <div class="slogan_content_box">
@@ -67,11 +67,11 @@
 
 <section class="solution">
     <div class="wrapper">
-        <h1>
+        <h1 data-scrolly="fromTop">
             Nous faisons partie de la
             <span>solution,</span>
         </h1>
-        <h1>
+        <h1 data-scrolly="fromBottom">
             Quels que soient vos
             <span>besoins!</span>
         </h1>
@@ -81,7 +81,7 @@
 <section class="service">
     <div class="wrapper">
         <div class="cards">
-            <div class="card">
+            <div class="card" data-scrolly="fromLeft">
                 <div class="card_content">
                     <h2>Protégez votre famille.</h2>
                     <p>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-scrolly="fromRight">
                 <div class="card_content">
                     <h2>Immobilier et financement.</h2>
                     <p>Lorsqu’on parle de droits immobiliers, nous sommes une référence grâce à notre expertise dans le domaine.</p>
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-scrolly="fromBottom">
                 <div class="card_content">
                     <h2>Consolidez votre entreprise.</h2>
                     <p>
@@ -171,17 +171,17 @@
                 </div>
             </div>
         </div>
-        <div class="bouton_flex"><a class="bouton" href="service.html">Voir tous nos services</a></div>
+        <div data-scrolly="fromTop" class="bouton_flex"><a class="bouton" href="service.html">Voir tous nos services</a></div>
     </div>
 </section>
 
 <section class="question">
     <div class="wrapper">
-        <div>
+        <div data-scrolly="fromLeft">
             <h3>Vous avez une question?</h3>
             <a href="contact.html">Écrivez-nous !</a>
         </div>
-        <div class="arrow">
+        <div class="arrow" data-scrolly="fromRight">
             <a class="up" href="#Haut">
                 <svg class="icon">
                     <use xlink:href="#icon-arrow"></use>

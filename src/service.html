@@ -1,6 +1,6 @@
 {% include "_partials/_header.html" with {title: 'Accueil'} %}
 
-<section class="hero">
+<section class="hero" data-scrolly="fromTop">
     <div class="wrapper">
         <img src="assets/images/service.jpg" alt="image service de la page" />
 
@@ -18,9 +18,9 @@
     </div>
 </section>
 
-<section class="particulier" data-component="Tabs">
+<section class="particulier" data-component="Tabs" data-scrolly="fromBottom">
     <div class="wrapper">
-        <div class="titre_section">
+        <div class="titre_section" data-scrolly="fromLeft">
             <h1>Particuliers</h1>
             <div class="green_line"></div>
         </div>
@@ -159,7 +159,7 @@
 
 <section class="entreprise" data-component="Tabs">
     <div class="wrapper">
-        <div class="titre_section">
+        <div class="titre_section" data-scrolly="fromLeft">
             <h1>Entreprises</h1>
             <div class="green_line"></div>
         </div>
@@ -259,13 +259,15 @@
 
 <section class="liens">
     <div class="wrapper">
-        <div class="titre_section">
+        <div class="titre_section" data-scrolly="fromLeft">
             <h1>Quelques liens utiles</h1>
             <div class="green_line"></div>
         </div>
-        <p>Voici quelques liens que vous pouvez consulter afin de vous aider à mieux comprendre certaines situations. Bonne lecture !</p>
+        <p data-scrolly="fromBottom">
+            Voici quelques liens que vous pouvez consulter afin de vous aider à mieux comprendre certaines situations. Bonne lecture !
+        </p>
 
-        <div class="accordeon">
+        <div class="accordeon" data-scrolly="fromBottom">
             <div class="grid-accordeon" data-component="Accordeon" data-not-Closing>
                 <div class="accordion__container js-header">
                     <div class="accordion__header">

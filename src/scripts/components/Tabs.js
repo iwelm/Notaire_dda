@@ -1,5 +1,5 @@
 export default class Tabs {
-  // Ce code à pour but d'afficher le contenu de la tabs sélectionner par des classe SCSS. Lorsqu'une tabs avec le nom de class "union" est cliquer, le code affiche le contenu qui à le meme non de classe.
+  // Ce code à pour but d'afficher le contenu de la tabs sélectionner par des classe SCSS. Lorsqu'une tabs avec le nom de class "union" est cliquer, le code affiche le contenu qui à le meme nom de classe.
   constructor(elementHTML) {
     this.elementHTML = elementHTML;
     this.tabs = elementHTML.querySelectorAll('.js-tab'); // Correspond au sélecteur du tabs

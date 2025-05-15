@@ -1,68 +1,72 @@
-.wrapper {
-    .accordeon {
-        margin: 0 0 60px 0;
-        .grid-accordeon {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 140px;
+.liens {
+    margin-top: 125px;
+}
 
-            @media screen and (max-width: $breakpoint-md) {
-                grid-template-columns: 1fr;
+.accordeon {
+    padding: 35px 0;
+
+    .grid-accordeon {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 280px;
+        row-gap: 50px;
+
+        .accordion__container {
+            cursor: pointer;
+            padding: 40px 40px;
+            background-color: var(--color-blue);
+            color: var(--color-bg-white);
+            border-radius: 15px;
+
+            .accordion__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                transition: transform 1.3s ease;
+                h3 {
+                    font-weight: 600;
+
+                    color: var(--color-orange);
+                    margin: 0 7px 0;
+                }
+
+                .icon {
+                    color: var(--color-orange);
+                    font-size: var(--font-size-btn-plus);
+                    transition: transform 1s $ease-out-cubic;
+                }
+            }
+            //.accordion__content représente le contenu caché par défaut
+            .accordion__content {
+                display: none;
+                margin-top: 15px;
             }
 
-            .accordion__container {
-                cursor: pointer;
-                margin-bottom: 45px;
-
-                .line {
-                    width: inherit;
-                    border: 1px solid var(--color-light-blue);
-                    transition: transform 1.3s ease;
+            &.is-active {
+                .icon {
+                    transform: rotate(45deg);
                 }
-                .accordion__header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    h3 {
-                        font-weight: 300;
-                        font-size: var(--font-size-h2);
-                        color: var(--color-light-blue);
-                    }
 
-                    .icon {
-                        color: var(--color-light-blue);
-                        font-size: var(--font-size-icon-plus);
-                        transition: transform 1s $ease-out-cubic;
-                    }
-                }
-                //.accordion__content représente le contenu caché par défaut
                 .accordion__content {
-                    display: none;
+                    display: block;
 
-                    span {
-                        font-weight: 600;
-                        color: var(--color-dark-blue);
-                        font-size: var(--font-size-p2);
+                    ul {
+                        li {
+                            a {
+                                color: var(--color-bg-white);
+                                text-decoration: none;
+                                transition: all 0.6s $ease-out-expo;
+
+                                &:hover {
+                                    color: var(--color-green);
+                                }
+                            }
+                        }
                     }
 
                     p {
-                        font-size: var(--font-size-p2);
-                        color: var(--color-light-blue);
-                        font-weight: 300;
-                    }
-                }
-
-                &.is-active {
-                    .icon {
-                        transform: rotate(45deg);
-                    }
-
-                    .line {
-                        border: 2px solid var(--color-light-blue);
-                        transform: translateY(5px);
-                    }
-                    .accordion__content {
-                        display: block;
+                        margin: 0 0 5px 0;
                     }
                 }
             }

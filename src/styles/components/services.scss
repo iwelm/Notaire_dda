@@ -61,22 +61,64 @@
     }
 }
 
-.particulier {
+.particulier,
+.entreprise {
     .wrapper {
         ul {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            align-items: end;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: 25px;
+                column-gap: 25px;
+            }
+
+            @media screen and (max-width: $breakpoint-mdd) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (max-width: $breakpoint-xs) {
+                display: block;
+            }
         }
 
         li {
             cursor: pointer;
             list-style: none;
+            text-transform: uppercase;
+            transition: all 0.6s $ease-out-expo;
+            border-bottom: 6px solid transparent;
+            padding-bottom: 6px;
+            height: max-content;
+            border-bottom: 2px solid var(--color-blue);
+
+            &.is-active {
+                color: var(--color-green);
+                border-bottom: 6px solid var(--color-green);
+            }
+
+            &:hover {
+                color: var(--color-green);
+                border-bottom: 6px solid var(--color-green);
+            }
+
+            @media screen and (max-width: $breakpoint-xs) {
+                padding: 25px 25px;
+            }
 
             div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                align-content: center;
+                height: max-content;
                 gap: 10px;
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    justify-content: flex-start;
+                }
             }
         }
 
@@ -85,6 +127,83 @@
         }
         .tab-container > div.is-active {
             display: block;
+        }
+
+        .tab-container {
+            padding-top: 50px;
+            min-height: 350px;
+
+            h3 {
+                color: var(--color-green);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 30px;
+                max-width: 1100px;
+            }
+
+            .grid-union {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 50px;
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media screen and (max-width: $breakpoint-mdd) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}
+
+.entreprise {
+    margin-top: 120px;
+    background-color: var(--color-blue);
+    .wrapper {
+        padding: 80px 0;
+
+        h1,
+        p,
+        .icon {
+            color: var(--color-bg-white);
+        }
+
+        .tab-container {
+            min-height: 450px;
+
+            .organisation {
+                .organisation-ul {
+                    color: var(--color-bg-white);
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    @media screen and (max-width: $breakpoint-mdd) {
+                        grid-template-columns: 1fr;
+                    }
+
+                    ul {
+                        display: block;
+                        margin-bottom: 20px;
+
+                        li {
+                            cursor: default;
+                            transition: none;
+                            border: 0;
+                            padding: 0;
+                            padding: 6px 6px;
+
+                            &:hover {
+                                color: var(--color-bg-white);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

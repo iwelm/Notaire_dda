@@ -2,6 +2,7 @@ import Scrolly from './components/Scrolly';
 import Header from './components/Header';
 import Form from './components/Form';
 import Tabs from './components/Tabs';
+import Accordeon from './components/Accordeon';
 
 export default class ComponentFactory {
   constructor() {
@@ -10,6 +11,7 @@ export default class ComponentFactory {
       Scrolly,
       Form,
       Tabs,
+      Accordeon,
     };
     this.init();
   }

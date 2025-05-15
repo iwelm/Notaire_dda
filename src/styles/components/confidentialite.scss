@@ -1,0 +1,48 @@
+.confidentialite {
+    margin: 50px 0;
+    .wrapper {
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 70px;
+            column-gap: 70px;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                grid-template-columns: 1fr;
+                row-gap: 40px;
+            }
+
+            div {
+                border: 1px solid var(--color-black);
+                padding: 20px 20px;
+                border-radius: 15px;
+
+                p {
+                    margin-bottom: 30px;
+                }
+            }
+
+            h4 {
+                margin-bottom: 10px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: var(--color-green);
+            }
+
+            ul {
+                margin-left: 20px;
+            }
+
+            p,
+            li {
+                max-width: 600px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .green_line {
+            width: var(--width-green-line-grande);
+            margin-bottom: 80px;
+        }
+    }
+}

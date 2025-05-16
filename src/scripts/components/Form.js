@@ -23,11 +23,9 @@ export default class Form {
     event.preventDefault();
 
     if (this.validate()) {
-      console.log('success');
       //envoi ajax du formulaire
       this.showConfirmation();
     } else {
-      console.log('fail');
     }
   }
 

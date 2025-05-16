@@ -14,7 +14,6 @@ class Main {
     new ComponentFactory();
     // Chargement du sprite svg par le système d'icône
     Icons.load();
-    console.log('Initialisation de mon deuxieme carousel');
   }
 }
 new Main();
